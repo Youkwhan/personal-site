@@ -47,6 +47,33 @@ a {
 .bottom-container {
 }
 
+.skill-row {
+	width: 50%;
+	margin: 100px auto;
+	text-align: left;
+	line-height: 2;
+}
+
+.skill-row .skill-img1 {
+	width: 25%;
+	float: left;
+	margin-right: 30px;
+}
+
+.skill-row .skill-img2 {
+	width: 25%;
+	float: right;
+	margin-left: 30px;
+}
+
+/* .skill-row .code-experience {
+	clear: left; 
+}
+
+.skill-row .code-projects {
+	clear: right;
+} */
+
 .top-cloud {
 	position: absolute;
 	right: 300px;
