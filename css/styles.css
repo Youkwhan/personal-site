@@ -1,155 +1,393 @@
+/* start of general */
+
 body {
+	color: #531d40;
 	margin: 0;
-	text-align: center; /*Will center all block elements with no width */
-	font-family: "Merriweather", serif;
-	color: #40514e;
-}
-
-h1 {
-	/* If width, we can center using margin auto to fill the remaining spaces inline */
-	margin: 50px auto 0;
-	font-family: "Sacramento", cursive;
-	font-size: 5.625rem; /*100% == 1rem == 16px, 90px = 562.2% = 5.625rem*/
-}
-
-h2 {
-	font-size: 2.5rem;
-	font-weight: normal;
-	padding-bottom: 10px;
-}
-
-h1,
-h2 {
-	color: #66bfbf;
-}
-
-h2,
-h3 {
 	font-family: "Montserrat", sans-serif;
-}
-
-h3,
-a {
-	color: #11999e;
 }
 
 p {
+	font-family: "Merriweather", sans-serif;
 	line-height: 2;
-}
-
-hr {
-	border: dotted #eaf6f6 6px;
-	border-bottom: none;
-	width: 4%;
-	margin: 100px auto;
+	color: black;
 }
 
 a {
-	color: #11999e;
-	font-family: "Montserrat", sans-serif;
-	margin: 10px 20px;
+	text-decoration: none;
+	color: rgb(150, 29, 108);
+}
+
+/* end of general */
+
+/* start of top box */
+
+nav {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+nav li {
+	float: right;
+}
+
+nav li a {
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
 	text-decoration: none;
 }
 
-a:hover {
-	color: #eaf6f6;
+nav li a:hover {
+	color: #13103c;
 }
 
-.top-container {
-	background-color: #e4f9f5;
+.top-box {
+	background-color: #ffe3dc;
+	text-align: center;
 	position: relative;
-	padding-top: 100px;
+	padding: 40px 0 0;
 }
 
-.middle-container {
-	margin: 100px 0;
+.top-cloud {
+	position: absolute;
+	right: 200px;
+	margin-top: 50px;
+	width: 200px;
+}
+.title-text{
+   margin-top: 150px;
 }
 
-.bottom-container {
-	background-color: #66bfbf;
-	padding: 50px 0 20px;
+.my-name {
+	margin-bottom: 2px;
+	font-family: "Sacramento", cursive;
+	font-size: 5rem;
 }
 
-.skill-row {
-	width: 50%;
-	margin: 100px auto;
-	text-align: left;
+.about-me-description {
+	margin-bottom: 300px;
 }
 
-.skill-row .skill-img1 {
-	width: 25%;
-	float: left;
-	margin-right: 30px;
-}
-
-.skill-row .skill-img2 {
-	width: 25%;
-	float: right;
-	margin-left: 30px;
-}
-
-/* .skill-row .code-experience {
-	clear: left; 
-}
-
-.skill-row .code-projects {
-	clear: right;
-} */
-
-.pro {
+.about-me-description .pro {
 	text-decoration: underline;
 }
 
-.intro {
-	width: 30%;
-	margin: auto;
-}
-
-.contact-message {
-	width: 40%;
-	margin: 40px auto 60px;
-}
-.top-cloud {
+.balloon-image {
 	position: absolute;
-	right: 300px;
-	top: 40px;
+	left: calc(50% - 70.5px);
+	bottom: 400px;
+	animation-name: balloon-animation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
 }
 
-.copyright {
-	color: #eaf6f6;
-	font-size: 0.75rem;
-	padding: 20px 0;
+@keyframes balloon-animation {
+	0% {
+		bottom: 200px;
+	}
+	50% {
+		bottom: 210px;
+	}
+	100% {
+		bottom: 200px;
+	}
 }
 
 .bottom-cloud {
 	position: absolute;
 	left: 250px;
-	bottom: 300px;
+	bottom: 400px;
+	width: 150px;
+}
+
+.ground {
+	width: 700px;
+	max-width: 100%;
+	margin-bottom: -4px;
+}
+
+/* end of top box */
+
+/* start of middle box */
+
+/* end of middle box */
+
+/* start of slide show */
+
+.slideshow {
+	text-align: center;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+
+/* Hide the images by default */
+
+.mySlides {
+	display: none;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: #531d40;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+.prev {
+	left: 0;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+	background-color: #ffe3dc;
+}
+
+/* Caption text */
+
+.text {
+	color: #531d40;
+	background-color: rgba(228, 204, 204, 0.6);
+	font-weight: bold;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+	background-color: #717171;
+}
+
+/* Fading animation */
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* end of slide show */
+
+/* start of bottom box */
+
+.bottom-box {
+	background-color: #ffe3dc;
+	padding: 70px 0 10px 0;
+	text-align: center;
+}
+
+.contact-me {
+	margin: 10px 70px;
+	height: 30px;
+}
+
+.inline {
+	display: inline;
+}
+
+.contact-icon {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+/* end of bottom box */
+
+.my-description {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.image-holder {
+	background-color: #ffe3dc;
+	border-radius: 50%;
+	height: 140px;
+	width: 140px;
+	margin-top: 50px;
+}
+
+.image-holder .image1{
+   width: 100%;
+}
+
+h1 {
+   
+	font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+	font-family: "Montserrat", sans-serif;
+	color: rgb(150, 29, 108);
+}
+
+.middle-box {
+	margin-top: 70px;
+	text-align: center;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+	.middle-box {
+		width: 80%;
+	}
+}
+
+.avatar {
+   border-style: solid;
+	border-radius: 50%;
+   
+}
+
+.horizontal-ruler {
+	height: 0;
+	border-style: dotted none none none;
+	border-width: 10px;
+	width: 50px;
+}
+
+.spacing {
+	height: 50px;
+}
+
+.float-left {
+	float: left;
+}
+
+.text-align-left {
+	text-align: left;
+}
+
+.margin-right {
+	margin-right: 50px;
+}
+
+.margin-bottom {
+	margin-bottom: 25px;
+}
+
+.copyright {
+	color: rgb(150, 29, 108);
+	font-size: 14px;
+	margin-top: 30px;
+}
+
+.contact-message {
+	width: 70%;
+	margin: 40px auto 60px;
 }
 
 .btn {
-	background: #11cdd4;
-	background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
-	background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
-	background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
-	background-image: -o-linear-gradient(top, #11cdd4, #11999e);
-	background-image: linear-gradient(to bottom, #11cdd4, #11999e);
-	-webkit-border-radius: 8;
-	-moz-border-radius: 8;
-	border-radius: 8px;
-	font-family: "Montserrat", sans-serif;
+	box-shadow: inset 0px 1px 0px 0px #a6827e;
+	background: linear-gradient(to bottom, #531d40 5%, #240d1c 100%);
+	background-color: #531d40;
+	border-radius: 10px;
+	border: 1px solid #54381e;
+	display: inline-block;
+	cursor: pointer;
 	color: #ffffff;
-	font-size: 20px;
-	padding: 10px 20px 10px 20px;
+	font-family: Verdana;
+	font-size: 24px;
+	padding: 10px 24px;
 	text-decoration: none;
+	text-shadow: 0px 1px 0px #4d3534;
 }
 
 .btn:hover {
-	background: #30e3cb;
-	background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
-	background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
-	background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
-	background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
-	background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
-	text-decoration: none;
+	background: linear-gradient(to bottom, #240d1c 5%, #531d40 100%);
+	background-color: #240d1c;
+}
+
+.btn:active {
+	position: relative;
+	top: 1px;
+}
+
+.contact-me-anchor:hover {
+	color: #e8b4a7;
 }
